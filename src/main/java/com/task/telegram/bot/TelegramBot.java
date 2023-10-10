@@ -42,6 +42,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                     String userName = update.getMessage().getChat().getUserName();
                     TelegramUser telegramUser = new TelegramUser().setTelegramUsername(userName);
                     telegramUser.setCode(UUID.randomUUID().toString());
+                    //TODO update with chatId, to send a message to a user, once the prices updated.
                     repository.save(telegramUser);
                     startCommandReceived(chatId, update.getMessage().getChat().getFirstName());
                 }
