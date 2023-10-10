@@ -17,7 +17,7 @@ import java.util.List;
 @Service
 public class SimpleCryptoService implements CryptoService {
 
-    public static final String SOURCE_URL = "https://api.mexc.com/api/v3/ticker/price.";
+    public static final String SOURCE_URL = "https://api.mexc.com/api/v3/ticker/price";
 
     private final ObjectMapper mapper = new ObjectMapper();
 
